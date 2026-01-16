@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level Up Fitness & Wellness</title>
+  <link rel="icon" type="image/png" href="images/log.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+
+    <div class="logo">
+      <img src="images/logo.png" alt="Level Up Logo">
+    </div>
+
+    <!-- Desktop Links -->
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#mission">Mission & Vision</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About Us</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#mission" onclick="closeMenu()">Mission & Vision</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+</nav>
+<!--HERO-->
+<section class="hero">
+
+   <div class="hero-inner">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+      <img src="images/logo.png" class="hero-logo" alt="Logo">
+      <h1>Level Up Fitness & Wellness Centre</h1>
+      <p>Because every step matters</p>
+    </div>
+
+  </div>
+  <!-- WAVE -->
+  <div class="wave-container">
+    <svg
+      class="waves"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s
+             58 18 88 18 58-18 88-18
+             58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" />
+        <use xlink:href="#gentle-wave" x="48" y="3" />
+        <use xlink:href="#gentle-wave" x="48" y="5" />
+        <use xlink:href="#gentle-wave" x="48" y="7" />
+      </g>
+    </svg>
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>
+    <strong>Level Up Fitness and Wellness Centre</strong> is a specialized clinic dedicated to
+    empowering women and children through personalized physiotherapy, fitness,
+    and wellness programs.
+    We combine expert physiotherapy care, scientifically designed exercise
+    programs, and a holistic approach to wellness.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <p>Comprehensive care tailored to every stage of life</p>
+
+  <div class="service-grid">
+
+    <div class="service-card" style="background-image:url('images/pediatric.png')">
+      <div class="overlay">
+        <h3>Pediatric Physiotherapy and Early Intervention</h3>
+        <p>Therapy for infants and children to improve movement, strength, balance, and development. Helps in achieving age-appropriate milestones.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/cp.png')">
+      <div class="overlay">
+        <h3>Cerebral Palsy Rehabilitation</h3>
+        <p>Specialized physiotherapy to improve mobility, posture, and daily functioning in children with cerebral palsy.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/delay.png')">
+      <div class="overlay">
+        <h3>Developmental Delay & Neuro Rehabilitation</h3>
+        <p>Programs to support children with delayed milestones in sitting, walking, or talking through guided exercises and play-based therapy.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/antenatal.png')">
+      <div class="overlay">
+        <h3>Antenatal & Post Natal Physiotherapy</h3>
+        <p>Safe exercises for before and after delivery to strengthen core muscles, improve posture, and support recovery.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/pelvic.png')">
+      <div class="overlay">
+        <h3>Pelvic floor & core strengthening</h3>
+        <p>Exercises and therapy to manage pelvic pain, urinary incontinence, and strengthen pelvic floor muscles.
+
+</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/wellness.png')">
+      <div class="overlay">
+        <h3>Women's Fitness & Wellness Programs </h3>
+        <p>Personalized fitness and physiotherapy programs focusing on strength, flexibility, posture, and overall wellness for women.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/pain.png')">
+      <div class="overlay">
+        <h3>Pain Management</h3>
+        <p>Relief and recovery programs for neck, back, joint, or muscle pain through exercise and physiotherapy techniques.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/sports.png')">
+      <div class="overlay">
+        <h3>Musculoskeletal & Sports Injury Rehabilitation</h3>
+        <p>We help you recover from body pain, injuries, or surgery. Our treatment helps reduce pain, improve movement, and make you strong again.</p>
+      </div>
+    </div>
+
+    <div class="service-card" style="background-image:url('images/posture.png')">
+      <div class="overlay">
+        <h3>Posture correction & Ergonomic Training</h3>
+        <p>Assessment and correction of posture to prevent pain, improve alignment, and enhance confidence.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section id="mission" class="mission">
+  <div class="box">
+    <h2>Our Mission</h2>
+    <p>
+      To create a healthier, stronger community of women and children by promoting movement, strength, and confidence through physiotherapy and fitness.
+
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Our Vision</h2>
+    <p>
+      To provide comprehensive, client-centered care that focuses on recovery, prevention, and long-term wellness.
+    </p>
+  </div>
+</section>
+
+<!--MAP-->
+<section id="location" class="location">
+  <div class="location-container">
+    <div class="location-text">
+      <h2>Our Location</h2>
+      <p>
+        Visit Level Up Fitness & Wellness Centre for personalized care and guidance.
+      </p>
+    </div>
+
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps?q=9.964098,76.282556&z=16&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-info">
+  <div class="info-card">
+    <h3>📍 Address</h3>
+    <p>
+      Level Up Fitness & Wellness Centre<br>
+      Kochi, Kerala
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>📞 Phone</h3>
+    <p>
+      <a href="tel:9074696122">+91 90746 96122</a>
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>📧 Email</h3>
+    <p>
+      <a href="mailto:levelupwellness@gmail.com">
+        levelupwellness@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>🕒 Working Hours</h3>
+    <p>
+      Mon – Sat<br>
+      8:00 AM – 7:00 PM
+    </p>
+  </div>
+</div>
+
+<a
+  href="https://wa.me/919074696122"
+  class="whatsapp-float"
+  target="_blank"
+>
+   <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+  <h2>Contact Us</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Level Up Fitness & Wellness Centre</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
