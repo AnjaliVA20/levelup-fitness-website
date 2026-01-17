@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Level Up Fitness & Wellness</title>
+  <title>Level Up Pediatric and Women’s Physiotherapy Centre</title>
   <link rel="icon" type="image/png" href="images/log.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -45,18 +45,31 @@
   </div>
 </nav>
 <!--HERO-->
+
+  <!-- hero content -->
 <section class="hero">
+  <div class="hero-overlay"></div>
 
-   <div class="hero-inner">
-
-    <!-- LEFT TEXT -->
-    <div class="hero-text">
-      <img src="images/logo.png" class="hero-logo" alt="Logo">
-      <h1>Level Up Fitness & Wellness Centre</h1>
-      <p>Because every step matters</p>
-    </div>
-
+  <div class="hero-content">
+  
+    <h1>Level Up<br> Pediatric and Women’s<br> Physiotherapy Centre</h1>
+    <p>Because every step matters</p>
+   
   </div>
+
+  <img src="images/hero-logo.png" class="hero-logo" />
+</section>
+
+<!-- WAVE OUTSIDE HERO -->
+<div class="wave-wrapper">
+  <!-- paste your wave.svg code here -->
+</div>
+
+
+  <!-- optional hero logo -->
+  <img src="images/hero-logo.png" alt="Hero Logo" class="hero-logo">
+</section>
+
   <!-- WAVE -->
   <div class="wave-container">
     <svg
@@ -64,6 +77,7 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 24 150 28"
       preserveAspectRatio="none"
+      shape-rendering="auto"
     >
       <defs>
         <path
@@ -95,6 +109,45 @@
     We combine expert physiotherapy care, scientifically designed exercise
     programs, and a holistic approach to wellness.
   </p>
+  <section class="why-choose">
+  <div class="why-container">
+
+    <!-- LEFT : ABOUT TEXT -->
+    <div class="why-text">
+      <h2>Why You Should<br>Choose Level Up?</h2>
+      <p>
+        Care that supports every small step towards better health and movement.
+      </p>
+    </div>
+
+    <!-- RIGHT : 4 GRID CARDS -->
+    <div class="why-grid">
+
+      <div class="why-card light">
+        <h4>Child-Friendly Care</h4>
+        <p>Fun, play-based physiotherapy to help children move, grow, and gain confidence.</p>
+      </div>
+
+      <div class="why-card dark">
+        <h4>Women’s Health Specialists</h4>
+        <p>Expert care for pregnancy, post-delivery recovery, pelvic floor issues, and fitness.</p>
+      </div>
+
+      <div class="why-card dark">
+        <h4> Experienced Therapist</h4>
+        <p>Qualified, caring physiotherapist who understand children and women’s needs.
+</p>
+      </div>
+
+      <div class="why-card light">
+        <h4>Personalized Treatment</h4>
+        <p>Each patient gets a treatment plan made specially for their condition and goals.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </section>
 
 <!-- SERVICES -->
@@ -121,7 +174,7 @@
     <div class="service-card" style="background-image:url('images/delay.png')">
       <div class="overlay">
         <h3>Developmental Delay & Neuro Rehabilitation</h3>
-        <p>Programs to support children with delayed milestones in sitting, walking, or talking through guided exercises and play-based therapy.</p>
+        <p>Programs to support children with delayed milestones in sitting, walking  through guided exercises and play-based therapy.</p>
       </div>
     </div>
 
@@ -196,13 +249,16 @@
     <div class="location-text">
       <h2>Our Location</h2>
       <p>
-        Visit Level Up Fitness & Wellness Centre for personalized care and guidance.
+        Visit Level Up Pediatric and Women’s Physiotherapy Centre for personalized care and guidance.
       </p>
     </div>
 
     <div class="map-wrapper">
       <iframe
-        src="https://www.google.com/maps?q=9.964098,76.282556&z=16&output=embed"
+        src="https://www.google.com/maps?q=Level+up+pediatric+and+women's+health+Physiotherapy+centre&output=embed"
+        width="100%"
+        height="350"
+        style="border:0; border-radius:12px;"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
@@ -218,7 +274,7 @@
   <div class="info-card">
     <h3>📍 Address</h3>
     <p>
-      Level Up Fitness & Wellness Centre<br>
+      Level Up Pediatric and Women’s Physiotherapy Centre<br>
       Kochi, Kerala
     </p>
   </div>
@@ -226,15 +282,15 @@
   <div class="info-card">
     <h3>📞 Phone</h3>
     <p>
-      <a href="tel:9074696122">+91 90746 96122</a>
+      <a href="tel:9400073214">+91 9400073214</a>
     </p>
   </div>
 
   <div class="info-card">
     <h3>📧 Email</h3>
     <p>
-      <a href="mailto:levelupwellness@gmail.com">
-        levelupwellness@gmail.com
+      <a href="mailto:levelupwellness2025@gmail.com">
+        levelupwellness2025@gmail.com
       </a>
     </p>
   </div>
@@ -243,13 +299,14 @@
     <h3>🕒 Working Hours</h3>
     <p>
       Mon – Sat<br>
-      8:00 AM – 7:00 PM
+      9:00 AM – 2:00 PM<br>
+      4:00 PM – 8:00 PM
     </p>
   </div>
 </div>
 
 <a
-  href="https://wa.me/919074696122"
+  href="https://wa.me/919400073214"
   class="whatsapp-float"
   target="_blank"
 >
@@ -258,17 +315,21 @@
 
   <h2>Contact Us</h2>
 
-  <form>
+  <form id="contactForm">
     <input type="text" placeholder="Your Name" required>
     <input type="tel" id="phone" placeholder="Mobile Number" required>
     <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit" id="submitBtn">
+    <span class="btn-text">Send Message</span>
+    <span class="spinner"></span>
+    </button>
+    <p id="formStatus" class="form-status"></p>
   </form>
 </section>
 
 <footer>
-  <p>© 2026 Level Up Fitness & Wellness Centre</p>
+  <p>© 2026 Level Up Pediatric and Women’s Physiotherapy Centre</p>
 </footer>
 
 <script src="script.js"></script>
