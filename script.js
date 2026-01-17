@@ -44,6 +44,7 @@ form.addEventListener("submit", function (e) {
     }, 1500);
   })
 
+    
     .catch(() => {
       statusText.textContent = "❌ Something went wrong. Please try again.";
       statusText.className = "form-status error";
