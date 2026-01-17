@@ -9,48 +9,43 @@ function closeMenu() {
   document.getElementById("mobileMenu").classList.remove("active");
 }
 
-const form = document.getElementById("contactForm");
-const statusText = document.getElementById("formStatus");
-const button = document.getElementById("submitBtn");
-
-form.addEventListener("submit", function (e) {
+document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  statusText.textContent = "";
-  button.classList.add("loading");
+  const form = this;
+  const status = document.getElementById("formStatus");
+  const spinner = document.getElementById("loadingSpinner");
+
+  status.textContent = "";
+  spinner.style.display = "inline-block";
 
   const formData = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycbzYBkFhXfZAgIaJZUjC7NK1FXN7QT5N5FvYxnG_ku_6cIV2-XwwY_BVuNOrucpDbm7O/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbyEn8ARDbPXhlXg7CHKtj56PJmwxnbvX_O-eIZImwovy7-ETE-nUN2MrBaDV4tfBYvz/exec", {
     method: "POST",
     body: formData
   })
-  .then(() => {
-    statusText.textContent = "✅ Message sent successfully!";
-    statusText.className = "form-status success";
-    form.reset();
+  .then(res => res.text())
+  .then(text => {
+    spinner.style.display = "none";
 
-    // WhatsApp redirect after 1.5 seconds
-    setTimeout(() => {
-      const phoneNumber = "919074696122"; // clinic WhatsApp number
-      const message = encodeURIComponent(
-        "Hello, I just submitted an enquiry through your website."
-      );
+    if (text === "Success") {
+      status.textContent = "✅ Message sent successfully!";
+      status.style.color = "green";
+      form.reset();
 
+      // WhatsApp redirect (optional)
       window.open(
-        `https://wa.me/${phoneNumber}?text=${message}`,
+        "https://wa.me/919074696122?text=New enquiry received from website",
         "_blank"
       );
-    }, 1500);
+    } else {
+      throw new Error(text);
+    }
   })
-
-    
-    .catch(() => {
-      statusText.textContent = "❌ Something went wrong. Please try again.";
-      statusText.className = "form-status error";
-    })
-    .finally(() => {
-      button.classList.remove("loading");
-    });
+  .catch(() => {
+    spinner.style.display = "none";
+    status.textContent = "❌ Something went wrong. Please try again.";
+    status.style.color = "red";
+  });
 });
-
